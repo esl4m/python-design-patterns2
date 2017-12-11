@@ -81,7 +81,7 @@ class TestManager:
             self._tc.setProblem(1)
             self._reporter.prepare()
 
-    def setReporter(self, reporter):
+    def set_reporter(self, reporter):
         self._reporter = reporter
 
     def setDB(self, db):
@@ -99,7 +99,7 @@ if __name__ == '__main__':
     reporter = Reporter()
     db = DB()
     tm = TestManager()
-    tm.setReporter(reporter)
+    tm.set_reporter(reporter)
     tm.setDB(db)
 
     reporter.setTM(tm)
