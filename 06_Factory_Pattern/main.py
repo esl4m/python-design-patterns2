@@ -21,7 +21,7 @@ class Female(Person):
 
 
 class Factory:
-    def getPerson(self, name, gender):
+    def get_person(self, name, gender):
         if gender == 'M':
             return Male(name)
         if gender == 'F':
@@ -30,4 +30,4 @@ class Factory:
 
 if __name__ == '__main__':
     factory = Factory()
-    person = factory.getPerson("Chetan", "M")
+    person = factory.get_person("Chetan", "M")
