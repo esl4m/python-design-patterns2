@@ -9,7 +9,7 @@ class TC:
     def setup(self):
         print("Setting up the Test")
         time.sleep(1)
-        self._tm.prepareReporting()
+        self._tm.prepare_reporting()
 
     def execute(self):
         if not self._bProblem:
@@ -18,7 +18,7 @@ class TC:
         else:
             print("Problem in setup. Test not executed.")
 
-    def tearDown(self):
+    def tear_down(self):
         if not self._bProblem:
             print("Tearing down")
             time.sleep(1)
@@ -75,7 +75,7 @@ class TestManager:
         self._db = None
         self._tc = None
 
-    def prepareReporting(self):
+    def prepare_reporting(self):
         rvalue = self._db.insert()
         if rvalue == -1:
             self._tc.setProblem(1)
@@ -113,4 +113,4 @@ if __name__ == '__main__':
         tm.setTC(tc)
         tc.setup()
         tc.execute()
-        tc.tearDown()
+        tc.tear_down()
