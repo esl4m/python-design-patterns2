@@ -19,7 +19,7 @@ class SalesManager(Manager):
 
 class Proxy(Manager):
     def __init__(self):
-        self.busy = 'No'
+        self.busy = 'Yes'
         self.sales = None
 
     def work(self):
