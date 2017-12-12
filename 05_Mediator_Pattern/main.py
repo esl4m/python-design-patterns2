@@ -22,7 +22,7 @@ class TC:
         if not self._bProblem:
             print("Tearing down")
             time.sleep(1)
-            self._tm.publishReport()
+            self._tm.publish_report()
         else:
             print("Test not executed. No tear down required.")
 
@@ -87,7 +87,7 @@ class TestManager:
     def setDB(self, db):
         self._db = db
 
-    def publishReport(self):
+    def publish_report(self):
         self._db.update()
         rvalue = self._reporter.report()
 
