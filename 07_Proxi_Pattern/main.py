@@ -27,13 +27,13 @@ class Proxy(Manager):
 
         if self.busy == 'Yes':
             self.sales = SalesManager()
-            time.sleep(2);
+            time.sleep(2)
             self.sales.talk()
         else:
-            time.sleep(2);
-        print("Sales Manager is busy")
+            time.sleep(2)
+            print("Sales Manager is busy")
 
 
-if '__name__' == '__main__':
+if __name__ == '__main__':
     p = Proxy()
     p.work()
