@@ -5,7 +5,7 @@ from mvc import Controller
 controller = Controller()
 
 # Displaying Summary for defect id # 2
-print (controller.getDefectSummary(2))
+print(controller.get_defect_summary(2))
 
 # Displaying defect list for 'ABC' Component
-print (controller.getDefectList('ABC'))
+print(controller.get_defect_list('ABC'))
