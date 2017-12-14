@@ -1,9 +1,8 @@
 import sqlite3
-import types
 
 
 class DefectModel:
-    def getDefectList(self, component):
+    def get_defect_list(self, component):
         query = '''select ID from defects where Component = '%s' ''' % component
         defectlist = self._dbselect(query)
         l = []
@@ -11,7 +10,7 @@ class DefectModel:
             l.append(row[0])
         return l
 
-    def getSummary(self, id):
+    def get_summary(self, id):
         query = '''select summary from defects where ID = '%d' ''' % id
         summary = self._dbselect(query)
         for row in summary:
@@ -31,7 +30,7 @@ class DefectView:
     def summary(self, summary, defectid):
         print("#### Defect Summary for defect# %d####\n%s" % (defectid,summary))
 
-    def defectList(self, list, category):
+    def defect_list(self, list, category):
         print ("#### Defect List for %s ####\n" % category)
         for defect in list:
             print(defect)
@@ -41,14 +40,14 @@ class Controller:
     def __init__(self):
         pass
 
-    def getDefectSummary(self, defectid):
+    def get_defect_summary(self, defectid):
         model = DefectModel()
         view = DefectView()
-        summary_data = model.getSummary(defectid)
+        summary_data = model.get_summary(defectid)
         return view.summary(summary_data, defectid)
 
-    def getDefectList(self, component):
+    def get_defect_list(self, component):
         model = DefectModel()
         view = DefectView()
-        defectlist_data = model.getDefectList(component)
-        return view.defectList(defectlist_data, component)
+        defectlist_data = model.get_defect_list(component)
+        return view.defect_list(defectlist_data, component)
