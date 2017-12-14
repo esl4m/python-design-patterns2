@@ -3,10 +3,10 @@ class Person:
         self.name = None
         self.gender = None
 
-    def getName(self):
+    def get_name(self):
         return self.name
 
-    def getGender(self):
+    def get_gender(self):
         return self.gender
 
 
