@@ -11,7 +11,7 @@ class Publisher:
         # OVERRIDE
         pass
 
-    def notifyAll(self):
+    def notify_all(self):
         # OVERRIDE
         pass
 
@@ -28,7 +28,7 @@ class TechForum(Publisher):
     def unregister(self, userObj):
         self._listOfUsers.remove(userObj)
 
-    def notifyAll(self):
+    def notify_all(self):
         for objects in self._listOfUsers:
             objects.notify(self.postname)
 
@@ -36,7 +36,7 @@ class TechForum(Publisher):
         # User writes a post.
         self.postname = postname
         # When submits the post is published and notification is sent to all
-        self.notifyAll()
+        self.notify_all()
 
 
 class Subscriber:
