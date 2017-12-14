@@ -56,7 +56,7 @@ class TestRunner:
         self.tc2 = TC2()
         self.tc3 = TC3()
 
-    def runAll(self):
+    def run_all(self):
         self.tc1.run()
         self.tc2.run()
         self.tc3.run()
@@ -65,4 +65,4 @@ class TestRunner:
 # Client
 if __name__ == '__main__':
     testrunner = TestRunner()
-    testrunner.runAll()
+    testrunner.run_all()
