@@ -29,7 +29,7 @@ class TC:
     def setTM(self, tm):
         self._tm = tm
 
-    def setProblem(self, value):
+    def set_problem(self, value):
         self._bProblem = value
 
 
@@ -78,7 +78,7 @@ class TestManager:
     def prepare_reporting(self):
         rvalue = self._db.insert()
         if rvalue == -1:
-            self._tc.setProblem(1)
+            self._tc.set_problem(1)
             self._reporter.prepare()
 
     def set_reporter(self, reporter):
